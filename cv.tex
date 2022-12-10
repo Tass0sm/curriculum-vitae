@@ -1,0 +1,80 @@
+\documentclass[line, margin]{res}
+%\usepackage[tmargin=2cm]{geometry}
+\usepackage{tabularx}
+
+% \newcolumntype{body}{p{\dimexpr \linewidth-3cm \relax}}
+% \newcolumntype{date}{p{3cm}}
+
+\begin{document}
+\name{Anastasios A. Manganaris}
+\address{manganaris.2@buckeyemail.osu.edu \\ 8590 St. Ives Pl., Cincinnati, Ohio 45255 \\ (513) 432-1399}
+
+% Help: https://www.maxburstein.com/blog/creating-resume-using-latex/
+
+\begin{resume}
+
+  \section{EDUCATION}
+  \begin{itemize}
+  \item The Ohio State University, Columbus, Ohio \\
+    Computer Science and Engineering B.S., May 2023 \\
+    Specializing in A.I. \\
+    GPA: 3.892 \\
+
+    Course Work: \\
+    \begin{tabular}{ p{\dimexpr \linewidth-5cm \relax}>{\raggedleft\arraybackslash}p{4cm} }
+      Calculus 3                                           &        2019 \\
+      Linear Algebra, Differential Equations               &        2020 \\
+      Algorithms and Data Structures                       &        2020 \\
+      Computer Systems                                     & 2020 - 2021 \\
+      Web Application Development                          & Spring 2021 \\
+      Techniques in A.I.                                   & Spring 2021 \\
+      Computer Architecture                                & Autumn 2021 \\
+      Neural Networks                                      & Spring 2022 \\
+      Machine Learning                                     & Spring 2022 \\
+      Programming Languages                                & Spring 2022 \\
+      Database Systems                                     & Spring 2022 \\
+    \end{tabular}
+  \item Anderson High School, Cincinnati, Ohio \\
+    Graduated with Honors, June 2019 \\
+    Ranked 13th out of 300. GPA: 4.663
+  \end{itemize}
+
+  \section{SKILLS}
+  \begin{itemize}
+  \item Programming experience in Haskell, Common Lisp, Scheme, Java, C, C++,
+    Python, MATLAB, Ruby, JavaScript, PHP.
+  \item Software experience with Linux, Slurm, Emacs, Git, Rails, Nix, and GNU Guix.
+  \end{itemize}
+
+  \section{EXPERIENCE}
+  \begin{itemize}
+  \item Research Assistant at The Ohio State University \hfill December 2021 - Present \\
+    Evaluated multiple programs for detecting RNA modifications. Results to be
+    incorporated into manuscript. Working on improving structure prediction
+    using metadata from nanopore sequencers. \\
+  \item Software Developer at SentriLock, LLC \hfill June 2018 - August 2018 \\
+    Made a web application for SentriLock's analytics dashboard, which visualized
+    lock-box accesses with a heat map overlayed on an interactive map. \\
+  \end{itemize}
+
+  \section{PROJECTS}
+  \begin{tabular}{ p{\dimexpr \textwidth-5cm \relax}>{\raggedleft\arraybackslash}p{4cm} }
+    \textbf{sclip} - A C program for retroactively capturing audio using the
+    JACK sound server API.  & April 2021 \\
+
+    \textbf{graphdoc} - A Haskell program for converting graphs of markup files
+    while preserving their structure.  & September 2020 \\
+  \end{tabular}
+
+  \section{HONORS}
+  \begin{tabular}{p{\dimexpr \textwidth-4cm \relax}>{\raggedleft\arraybackslash}p{3cm}}
+    OSU Maximus Scholarship &                                          May 2019 \\
+    IBM James Watson Memorial Scholarship &                            May 2019 \\
+    Doris Outstanding Senior in Mathematics Award &                    April 2019 \\
+    Ohio State Champions with the 7$\sigma$ FTC Robotics Team &        January 2019 \\
+    Induction to the Cum Laude Society &                               October 2018 \\
+    Induction to the National Honor Society &                          March 2018 \\
+  \end{tabular}
+
+\end{resume}
+\end{document}
