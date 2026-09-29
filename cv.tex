@@ -1,13 +1,22 @@
 \documentclass[line, margin]{res}
 %\usepackage[tmargin=2cm]{geometry}
 \usepackage{tabularx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=1.2em, topsep=0pt, itemsep=0pt, parsep=0pt, partopsep=0pt}
+\newcommand{\award}[1]{{\setlength{\fboxsep}{1.5pt}\colorbox{yellow!35}{\textbf{#1}}}}
+\def\sectionfont{\small\bf}
 
 % \newcolumntype{body}{p{\dimexpr \linewidth-3cm \relax}}
 % \newcolumntype{date}{p{3cm}}
 
 \begin{document}
 \name{Anastasios A. Manganaris}
-\address{amangana@purdue.edu \\ Cincinnati, Ohio \\ (513) 432-1399}
+\address{amangana@purdue.edu \ $\cdot$ \ West Lafayette, IN}
+\address{\href{https://tass0sm.github.io/}{\underline{tass0sm.github.io}} \ $\cdot$ \
+  \href{https://github.com/Tass0sm}{\underline{GitHub}} \ $\cdot$ \
+  \href{https://scholar.google.com/citations?user=05WNgl8AAAAJ&hl=en}{\underline{Google Scholar}}}
 
 % Help: https://www.maxburstein.com/blog/creating-resume-using-latex/
 
@@ -15,55 +24,66 @@
 
   \section{EDUCATION}
 
-  \textbf{Purdue University}, West Lafayette, Indiana \hfill May 2028 \\
+  \textbf{Purdue University}, West Lafayette, Indiana \hfill Expected May 2028 \\
   Ph.D. Computer Science \hfill GPA: 3.78 (4.0 scale) \\
-  \\
-  \begin{tabular*}{\textwidth}{@{}l p{4in}}
-    Courses: & Algorithms, Introduction to Robot Learning, Operating Systems,
-    Artificial Intelligence, Imitation Learning, Optimization \\
-  \end{tabular}
+  Advised by Ahmed H. Qureshi
 
   \textbf{The Ohio State University}, Columbus, Ohio \hfill May 2023 \\
   B.S. Computer Science \& Engineering, specialization: A. I. \hfill GPA: 3.904 (4.0 scale) \\
-  \\
-  \begin{tabular*}{\textwidth}{@{}l p{4in}}
-    Courses: & Calculus, Linear Algebra, Differential
-    Equations, Algorithms and Data Structures, Computer Systems, Web
-    Application Development, Techniques in A.I., Computer
-    Architecture, Neural Networks, Machine Learning Theory,
-    Programming Languages, Database Systems, Parallel Computing,
-    Computer Vision, Automata \& Formal Languages, Compiler Design and
-    Implementation, Realtime Rendering \\
-  \end{tabular}
-
-  \textbf{Anderson High School}, Cincinnati, Ohio \hfill June 2019 \\
-  Graduated with Honors \hfill GPA: 4.663 (4.0 scale) \\
+  Advised by Sanggu Kim
 
   \section{EXPERIENCE}
-  \textbf{Research Assistant at Purdue University} \hfill May 2024 - Present \\
-  Researching formal methods for more general and safe robot policy learning,
-  multi-agent task and motion planning, and hierarchical reinforcement learning.
+  \textbf{Research Assistant at Purdue University} \hfill May 2024 -- Present \\
+  Scaling imitation learning, reinforcement learning, and multi-agent task and
+  motion planning to longer horizons and larger robot teams by exploiting
+  problem structure, using formal specifications and hierarchical decompositions.
+  \begin{itemize}
+    \item Developed Automaton Constrained Q-Learning for temporal-logic-constrained
+      reinforcement learning (NeurIPS 2025)
+    \item Built Graph-of-Constraints MPC for reactive multi-robot task and motion
+      planning, deployed on UR5e arms (ICRA 2026)
+    \item Scaling diffusion policy guidance to compositional tasks using logical
+      world models (submitted to ICRA 2027)
+    \item Developing reactive multi-robot TAMP approaches for loco-manipulator
+      teams, deployed on the Unitree B1 and G1 (ongoing work)
+  \end{itemize}
 
-  \textbf{Teaching Assistant at Purdue University} \hfill August 2023 - May 2024 \\
+  \textbf{Teaching Assistant at Purdue University} \hfill August 2023 -- May 2024 \\
   Instruction, course organization, development, and grading for Data Structures
   and Algorithms (CS251, Head TA for CS253)
 
-  \textbf{Research Assistant at The Ohio State University} \hfill December 2021 - May 2023 \\
+  \textbf{Research Assistant at The Ohio State University} \hfill December 2021 -- May 2023 \\
   Investigated identifying RNA chemical modifications from Nanopore sequencing
   data and relationship between Nanopore sequence quality and RNA structures.
 
-  \textbf{Software Developer at SentriLock, LLC} \hfill June 2018 -
+  \textbf{Software Development Intern at SentriLock, LLC} \hfill June 2018 --
   August 2018 \\ Designed, implemented, and deployed an application
   for an analytics dashboard. %, which visualized lock-box
   % accesses with a heat map overlayed on an interactive map.
 
   \section{PUBLICATIONS}
 
-  \begin{tabularx}{\linewidth}{ @{}X  >{\raggedleft\arraybackslash}p{1in} }
-    \textbf{A. Manganaris}, J. Lu, A.H. Qureshi, S. Jagannathan. Graph-of-Constraints Model Predictive Control for Reactive Multi-agent Task and Motion Planning, IEEE RAS International Conference on Robotics and Automation (ICRA), 2026. \\
-    \textbf{A. Manganaris}, V. Giammarino, A.H. Qureshi, S. Jagannathan. Formal Methods in Robot Policy Learning and Verification: A Survey on Current Techniques and Future Directions, Transactions on Machine Learning Research (TMLR), Dec 2025. \\
-    \textbf{A. Manganaris}, V. Giammarino, A.H. Qureshi. Automaton Constrained Q-Learning, Neural Information Processing Systems (NeurIPS), 2025. \\
-  \end{tabularx}
+  \textit{Conference \& Journal Papers} \\
+  \textbf{A. Manganaris}, J. Lu, A.H. Qureshi, S. Jagannathan. Graph-of-Constraints Model Predictive Control for Reactive Multi-agent Task and Motion Planning, IEEE RAS International Conference on Robotics and Automation (ICRA), 2026.
+
+  \textbf{A. Manganaris}, V. Giammarino, A.H. Qureshi, S. Jagannathan. Formal Methods in Robot Policy Learning and Verification: A Survey on Current Techniques and Future Directions, Transactions on Machine Learning Research (TMLR), 2025.
+
+  \textbf{A. Manganaris}, V. Giammarino, A.H. Qureshi. Automaton Constrained Q-Learning, Conference on Neural Information Processing Systems (NeurIPS), 2025.
+
+  \textit{Under Review} \\
+  M. Zoellner, \textbf{A. Manganaris}, A.H. Qureshi, R. Paleja. Composing Learned Robot Behaviors with Temporal Logic at Runtime. Under review at IEEE RAS International Conference on Robotics and Automation (ICRA), 2027.
+
+  V. Giammarino, \textbf{A. Manganaris}, A.H. Qureshi. When Interaction Changes Controllability: Physics-informed Goal-Conditioned Reinforcement Learning for Manipulation. Under review at International Conference on Learning Representations (ICLR), 2027.
+
+  \textit{Workshop Papers} \\
+  \textbf{A. Manganaris}, R. Banerjee, G. Prabhakaran, A.H. Qureshi. Riemannian Splat Regression Models for Learning Time Fields on Arbitrary Riemannian Manifolds, IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) Workshop on Geometric-Aware Representations in Robotics, 2026. \award{Spotlight Paper}
+
+  \section{SERVICE}
+
+  Co-organizer, IROS 2026 Workshop on Hybrid Architectures for Embodied Autonomy:
+  Bridging Learning, Planning, and Control \\
+  Reviewer, IEEE Robotics and Automation Letters (RA-L), 2026 -- Present \\
+  Reviewer, Conference on Robot Learning (CoRL), 2024, 2026
 
   %% \section{PROJECTS}
 
@@ -79,10 +99,12 @@
   \section{SKILLS}
 
   \begin{tabularx}{\linewidth}{ @{}X }
-    \textbf{Programming Languages}: Python, C/C++, MATLAB, Java, Rust, Common Lisp,
-    GNU Guile, Haskell, Ruby, JavaScript, PHP \\
-    \textbf{Software \& Services}: ROS2, ROS, JAX, PyTorch, Linux, Docker, AWS,
-    Slurm, OpenMP, MPI, Emacs, Git, Rails, ReactJS, Nix, and GNU Guix. \\
+    \textbf{Robotics}: On-policy and off-policy reinforcement learning, diffusion policies,
+    world models, manipulator control, task and motion planning.
+    Experience with the Universal Robots UR5e, Unitree B1, and Unitree G1. \\
+    \textbf{Programming Languages}: Python, C/C++, Rust, MATLAB \\
+    \textbf{Software \& Tools}: ROS, ROS2, Isaac Sim, Isaac Lab, MuJoCo, PyTorch, JAX,
+    Linux, Docker, Git, Slurm, AWS \\
   \end{tabularx}
 
   %% \section{HONORS \& ACTIVITIES}
