@@ -1,127 +1,155 @@
-\documentclass[line, margin]{res}
-%\usepackage[tmargin=2cm]{geometry}
+%----------------------------------------------------------------------------------------
+% Based on the "Medium Length Professional CV" template from LaTeXTemplates.com
+% (original author: Trey Hunner). Requires resume.cls in the same directory.
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt]{resume}
+
+\usepackage[left=0.5in,top=0.4in,right=0.5in,bottom=0.4in]{geometry}
 \usepackage{tabularx}
 \usepackage[dvipsnames]{xcolor}
 \usepackage[hidelinks]{hyperref}
-\usepackage{enumitem}
-\setlist[itemize]{leftmargin=1.2em, topsep=0pt, itemsep=0pt, parsep=0pt, partopsep=0pt}
+\def\namesize{\LARGE}
+\def\nameskip{\medskip}
+\def\sectionskip{\smallskip}
+\def\sectionlineskip{\smallskip}
 \newcommand{\award}[1]{{\setlength{\fboxsep}{1.5pt}\colorbox{yellow!35}{\textbf{#1}}}}
-\def\sectionfont{\small\bf}
+\newcommand{\pubgroup}[1]{\vspace{0.3em}\textit{#1} \\[0.1em]}
 
-% \newcolumntype{body}{p{\dimexpr \linewidth-3cm \relax}}
-% \newcolumntype{date}{p{3cm}}
-
-\begin{document}
 \name{Anastasios A. Manganaris}
-\address{amangana@purdue.edu \ $\cdot$ \ West Lafayette, IN}
-\address{\href{https://tass0sm.github.io/}{\underline{tass0sm.github.io}} \ $\cdot$ \
-  \href{https://github.com/Tass0sm}{\underline{GitHub}} \ $\cdot$ \
+\address{amangana@purdue.edu \\ West Lafayette, IN \\
+  \href{https://tass0sm.github.io/}{\underline{tass0sm.github.io}} \\
+  \href{https://github.com/Tass0sm}{\underline{GitHub}} \\
   \href{https://scholar.google.com/citations?user=05WNgl8AAAAJ&hl=en}{\underline{Google Scholar}}}
 
-% Help: https://www.maxburstein.com/blog/creating-resume-using-latex/
+\begin{document}
 
-\begin{resume}
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
 
-  \section{EDUCATION}
+\begin{rSection}{Education}
 
-  \textbf{Purdue University}, West Lafayette, Indiana \hfill Expected May 2028 \\
-  Ph.D. Computer Science \hfill GPA: 3.78 (4.0 scale) \\
-  Advised by Ahmed H. Qureshi
+  {\bf Purdue University}, West Lafayette, Indiana \hfill Expected May 2028 \\
+  Ph.D. Computer Science, advised by Ahmed H. Qureshi \hfill GPA: 3.78 (4.0 scale)
 
-  \textbf{The Ohio State University}, Columbus, Ohio \hfill May 2023 \\
-  B.S. Computer Science \& Engineering, specialization: A. I. \hfill GPA: 3.904 (4.0 scale) \\
-  Advised by Sanggu Kim
+  {\bf The Ohio State University}, Columbus, Ohio \hfill May 2023 \\
+  B.S. Computer Science \& Engineering, specialization: A.I., advised by Sanggu Kim \hfill GPA: 3.904 (4.0 scale)
 
-  \section{EXPERIENCE}
-  \textbf{Research Assistant at Purdue University} \hfill May 2024 -- Present \\
-  Scaling imitation learning, reinforcement learning, and multi-agent task and
-  motion planning to longer horizons and larger robot teams by exploiting
-  problem structure, using formal specifications and hierarchical decompositions.
-  \begin{itemize}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Experience}
+
+  \begin{rSubsection}{Purdue University, \textnormal{\textit{Research Assistant}}}{May 2024 -- Present}{}{}
+    \item[] Scaling imitation learning, reinforcement learning, and multi-agent task and
+      motion planning to longer horizons and larger robot teams by exploiting
+      problem structure, using formal specifications and hierarchical decompositions.
     \item Developed Automaton Constrained Q-Learning for temporal-logic-constrained
-      reinforcement learning (NeurIPS 2025)
-    \item Built Graph-of-Constraints MPC for reactive multi-robot task and motion
-      planning, deployed on UR5e arms (ICRA 2026)
+      RL (NeurIPS 2025)
+    \item Built Graph-of-Constraints MPC for reactive multi-robot TAMP, deployed
+      on UR5e arms (ICRA 2026)
     \item Scaling diffusion policy guidance to compositional tasks using logical
       world models (submitted to ICRA 2027)
-    \item Developing reactive multi-robot TAMP approaches for loco-manipulator
-      teams, deployed on the Unitree B1 and G1 (ongoing work)
-  \end{itemize}
+    \item Developing reactive multi-robot TAMP for loco-manipulator teams, deployed on
+      the Unitree B1 and G1 (ongoing)
+  \end{rSubsection}
 
-  \textbf{Teaching Assistant at Purdue University} \hfill August 2023 -- May 2024 \\
-  Instruction, course organization, development, and grading for Data Structures
-  and Algorithms (CS251, Head TA for CS253)
+  \begin{rSubsection}{Purdue University, \textnormal{\textit{Teaching Assistant, Head Teaching Assistant}}}{August 2023 -- May 2024}{}{}
+    \item Instruction, course organization, development, and grading for Data Structures
+      and Algorithms
+  \end{rSubsection}
 
-  \textbf{Research Assistant at The Ohio State University} \hfill December 2021 -- May 2023 \\
-  Investigated identifying RNA chemical modifications from Nanopore sequencing
-  data and relationship between Nanopore sequence quality and RNA structures.
+  \begin{rSubsection}{The Ohio State University, \textnormal{\textit{Research Assistant}}}{December 2021 -- May 2023}{}{}
+    \item Investigated identifying RNA chemical modifications from Nanopore sequencing
+      data and relationship between Nanopore sequence quality and RNA structures.
+  \end{rSubsection}
 
-  \textbf{Software Development Intern at SentriLock, LLC} \hfill June 2018 --
-  August 2018 \\ Designed, implemented, and deployed an application
-  for an analytics dashboard. %, which visualized lock-box
-  % accesses with a heat map overlayed on an interactive map.
+  \begin{rSubsection}{SentriLock, LLC, \textnormal{\textit{Software Development Intern}}}{June 2018 -- August 2018}{}{}
+    \item Designed, implemented, and deployed an application for an analytics
+      dashboard. %, which visualized lock-box
+      % accesses with a heat map overlayed on an interactive map.
+  \end{rSubsection}
 
-  \section{PUBLICATIONS}
+\end{rSection}
 
-  \textit{Conference \& Journal Papers} \\
-  \textbf{A. Manganaris}, J. Lu, A.H. Qureshi, S. Jagannathan. Graph-of-Constraints Model Predictive Control for Reactive Multi-agent Task and Motion Planning, IEEE RAS International Conference on Robotics and Automation (ICRA), 2026.
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Publications}
+  \small\setlength{\parskip}{0.4em}
+
+  \pubgroup{Conference \& Journal Papers}
+  \textbf{A. Manganaris}, J. Lu, A.H. Qureshi, S. Jagannathan. Graph-of-Constraints Model Predictive Control for Reactive Multi-agent Task and Motion Planning, IEEE International Conference on Robotics and Automation (ICRA), 2026.
 
   \textbf{A. Manganaris}, V. Giammarino, A.H. Qureshi, S. Jagannathan. Formal Methods in Robot Policy Learning and Verification: A Survey on Current Techniques and Future Directions, Transactions on Machine Learning Research (TMLR), 2025.
 
   \textbf{A. Manganaris}, V. Giammarino, A.H. Qureshi. Automaton Constrained Q-Learning, Conference on Neural Information Processing Systems (NeurIPS), 2025.
 
-  \textit{Under Review} \\
-  M. Zoellner, \textbf{A. Manganaris}, A.H. Qureshi, R. Paleja. Composing Learned Robot Behaviors with Temporal Logic at Runtime. Under review at IEEE RAS International Conference on Robotics and Automation (ICRA), 2027.
+  \pubgroup{Under Review}
+  M. Zoellner, \textbf{A. Manganaris}, A.H. Qureshi, R. Paleja. Composing Learned Robot Behaviors with Temporal Logic at Runtime. Under review at IEEE International Conference on Robotics and Automation (ICRA), 2027.
 
   V. Giammarino, \textbf{A. Manganaris}, A.H. Qureshi. When Interaction Changes Controllability: Physics-informed Goal-Conditioned Reinforcement Learning for Manipulation. Under review at International Conference on Learning Representations (ICLR), 2027.
 
-  \textit{Workshop Papers} \\
-  \textbf{A. Manganaris}, R. Banerjee, G. Prabhakaran, A.H. Qureshi. Riemannian Splat Regression Models for Learning Time Fields on Arbitrary Riemannian Manifolds, IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) Workshop on Geometric-Aware Representations in Robotics, 2026. \award{Spotlight Paper}
+  \pubgroup{Workshop Papers}
+  \textbf{A. Manganaris}, R. Banerjee, G. Prabhakaran, A.H. Qureshi. Riemannian Splat Regression Models for Learning Time Fields on Arbitrary Riemannian Manifolds, IROS 2026 Workshop on Geometric-Aware Representations in Robotics. \award{Spotlight}
 
-  \section{SERVICE}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	SERVICE
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Service}
 
   Co-organizer, IROS 2026 Workshop on Hybrid Architectures for Embodied Autonomy:
   Bridging Learning, Planning, and Control \\
   Reviewer, IEEE Robotics and Automation Letters (RA-L), 2026 -- Present \\
   Reviewer, Conference on Robot Learning (CoRL), 2024, 2026
 
-  %% \section{PROJECTS}
+\end{rSection}
 
-  %% \begin{tabularx}{\linewidth}{ @{}X  >{\raggedleft\arraybackslash}p{1in} }
-  %%   \textbf{multi-cam tool} - Android App (in Kotlin) for
-  %%   stereo photography. & November 2022 \\
-  %%   \textbf{sclip} - C program for retroactively capturing audio using the
-  %%   JACK sound server API.  & April 2021 \\
-  %%   \textbf{graphdoc} - Haskell program for converting graphs of markup files
-  %%   while preserving their structure.  & September 2020 \\
-  %% \end{tabularx}
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
 
-  \section{SKILLS}
+\begin{rSection}{Skills}
 
-  \begin{tabularx}{\linewidth}{ @{}X }
-    \textbf{Robotics}: On-policy and off-policy reinforcement learning, diffusion policies,
+  \begin{tabularx}{\linewidth}{@{} >{\bfseries}l @{\hspace{3ex}} X @{}}
+    Robotics & On-policy and off-policy reinforcement learning, diffusion policies,
     world models, manipulator control, task and motion planning.
-    Experience with the Universal Robots UR5e, Unitree B1, and Unitree G1. \\
-    \textbf{Programming Languages}: Python, C/C++, Rust, MATLAB \\
-    \textbf{Software \& Tools}: ROS, ROS2, Isaac Sim, Isaac Lab, MuJoCo, PyTorch, JAX,
+    Experience with Universal Robots UR5e, Unitree B1 and G1. \\
+    Languages & Python, C/C++, Rust, MATLAB \\
+    Software \& Tools & ROS, ROS2, Isaac Sim, Isaac Lab, MuJoCo, PyTorch, JAX,
     Linux, Docker, Git, Slurm, AWS \\
   \end{tabularx}
 
-  %% \section{HONORS \& ACTIVITIES}
+\end{rSection}
 
-  %% \begin{tabularx}{\linewidth}{ @{}X  >{\raggedleft\arraybackslash}p{1in} }
-  %%   Project Leader for OSU's Code4Community Club &                     2021 - 2023 \\
-  %%   BuckeyeCTF OSU Division 2\textsuperscript{nd} Place &              October 2022 \\
-  %%   Buckeye Programming Competition OSU 6\textsuperscript{th} Place &  October 2022 \\
-  %%   BuckeyeCTF OSU Division 1\textsuperscript{st} Place &              October 2021 \\
-  %%   OSU Maximus Scholarship &                                          May 2019 \\
-  %%   IBM James Watson Memorial Scholarship &                            May 2019 \\
-  %%   %% Doris Outstanding Senior in Mathematics Award &                    April 2019 \\
-  %%   Ohio State Champions with the 7$\sigma$ FTC Robotics Team &        January 2019 \\
-  %%   Induction to the Cum Laude Society &                               October 2018 \\
-  %%   Induction to the National Honor Society &                          March 2018 \\
-  %%   Lead Programmer for 7$\sigma$ FTC Robotics Team  &                 2017 - 2019 \\
-  %% \end{tabularx}
+%% \begin{rSection}{Projects}
+%%   \textbf{multi-cam tool} - Android App (in Kotlin) for stereo photography. \hfill November 2022 \\
+%%   \textbf{sclip} - C program for retroactively capturing audio using the
+%%   JACK sound server API. \hfill April 2021 \\
+%%   \textbf{graphdoc} - Haskell program for converting graphs of markup files
+%%   while preserving their structure. \hfill September 2020
+%% \end{rSection}
 
-\end{resume}
+%% \begin{rSection}{Honors \& Activities}
+%%   Project Leader for OSU's Code4Community Club \hfill 2021 -- 2023 \\
+%%   BuckeyeCTF OSU Division 2\textsuperscript{nd} Place \hfill October 2022 \\
+%%   Buckeye Programming Competition OSU 6\textsuperscript{th} Place \hfill October 2022 \\
+%%   BuckeyeCTF OSU Division 1\textsuperscript{st} Place \hfill October 2021 \\
+%%   OSU Maximus Scholarship \hfill May 2019 \\
+%%   IBM James Watson Memorial Scholarship \hfill May 2019 \\
+%%   %% Doris Outstanding Senior in Mathematics Award \hfill April 2019 \\
+%%   Ohio State Champions with the 7$\sigma$ FTC Robotics Team \hfill January 2019 \\
+%%   Induction to the Cum Laude Society \hfill October 2018 \\
+%%   Induction to the National Honor Society \hfill March 2018 \\
+%%   Lead Programmer for 7$\sigma$ FTC Robotics Team \hfill 2017 -- 2019
+%% \end{rSection}
+
 \end{document}
